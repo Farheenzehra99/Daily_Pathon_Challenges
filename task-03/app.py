@@ -1,6 +1,13 @@
 import streamlit as st
 from streamlit_lottie import st_lottie
 import json
+import os
+
+# Check if "assets" folder and "calculator.json" exist
+print("Current Directory:", os.getcwd())
+print("Assets Folder Exists:", os.path.exists("assets"))
+print("Files in assets:", os.listdir("assets") if os.path.exists("assets") else "Folder not found!")
+
 
 # Function to load Lottie animation
 def load_lottie_file(filepath: str):
